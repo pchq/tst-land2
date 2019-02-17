@@ -1,0 +1,21 @@
+.svg-decor {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  * {
+    fill: transparent;
+    stroke: rgba(#f8f8f8, .06);
+    stroke-width: 1;
+  }
+  
+  &--white * {
+    stroke: rgba(#f8f8f8, .06);
+  }  
+  &--blue * {
+    stroke: rgba($c-blue-dark, .1);
+  }
+}

@@ -1,0 +1,59 @@
+.about{
+  background: url($imgPath + 'pulse.png') no-repeat calc( 100% + 115px ) calc( 100% - 30px );
+  
+  padding: 225px 0 155px;  
+  margin-bottom: -75px;
+  position: relative;
+  
+  &__row{
+    display: flex;
+  }
+  &__col{
+    display: flex;
+  }
+  &__col--left{
+    flex-basis: 40%;
+    flex-shrink: 0;
+    justify-content: flex-end;
+  }
+  
+  &__col--right{
+  }
+  &__content{
+    margin: auto;
+    font-size: 16px;
+    line-height: (24/16);
+    color: $c-blue-dark;
+    padding: 0 35px 65px;
+    
+    p {
+      margin-bottom: 18px;
+    }
+  }
+  &__heading{
+    color: $c-blue-dark;
+    margin-bottom: 20px;
+  }
+  &__list{
+    list-style: none;
+    padding-left: 15px;
+    margin: 0 0 35px;
+    max-width: 490px;
+  }
+  &__list-item{
+    margin-bottom: 16px;
+    position: relative;
+    
+    &::before{
+      display: block;
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $c-blue-bright;
+      left: -15px;
+      top: .7em;
+    }
+  }
+}

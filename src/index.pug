@@ -1,0 +1,75 @@
+include data
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width")
+		title Landing Page #{projectName}
+		link(rel="stylesheet" href=`${filesPath}assets/css/style.min.css?v=${Date.now()}`)
+		
+	body
+		header.l-container
+			nav.navbar
+				a.navbar__logo(href='/' title=`${projectName}`)
+					img.navbar__logo-img(src=`${filesPath}images/logo.png` alt=`${projectName}`)
+				
+				ul.top-menu
+					each item in menu
+						li.top-menu__item
+							a.top-menu__link(href=`${item.href}` title=`${item.label}`) #{item.label}
+							
+				.navbar__btn-wrap
+					button.btn.btn--blue Оставить заявку
+			
+		section.top-slider
+			.top-slider__body.l-container
+				.top-slider__item
+					h1.heading.top-slider__item-heading Расширяем возможности предоставления качественных медицинских услуг
+					p.top-slider__item-descr
+						| «Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья, 
+						| разработанный для участников программы «Мое здоровье».
+
+					button.btn.btn--rose Узнать больше
+					
+			.top-slider__controls 
+				ul.slider-controls
+					li.slider-controls__item.is-active
+					li.slider-controls__item
+
+			svg.svg-decor.svg-decor--white
+				ellipse(cx=`${830/1366*100}%` cy="889" rx=`${1139/1366*100}%` ry="1139") 
+				ellipse(cx=`${910/1366*100}%` cy="872" rx=`${862/1366*100}%` ry="862")
+				ellipse(cx=`${1200/1366*100}%` cy="948" rx=`${593/1366*100}%` ry="593")
+				
+				
+		section.about
+			.l-container
+				.about__row
+					.about__col.about__col--left
+						img.about__pic(src=`${filesPath}images/phone.png` alt=`Сервис ${projectName}` title=`Сервис ${projectName}`)
+					.about__col.about__col--right
+						.about__content
+							h2.heading.about__heading Что такое «Дневник здоровья»?
+							p Дневник пациента — это удобный онлайн-сервис:
+							ul.about__list
+								each item in aboutService
+									li.about__list-item #{item}
+									
+							button.btn.btn--rose Оставить заявку
+							
+			svg.svg-decor.svg-decor--blue
+				ellipse(cx=`${-1020 / 1366 * 100}%` cy="-30" rx=`${1087 / 1366 * 100}%` ry="704")
+				ellipse(cx=`${-430 / 1366 * 100}%` cy="-90" rx=`${1100 / 1366 * 100}%` ry="704")
+					
+				
+		section.functions
+			.l-container
+				h3.heading.functions__heading Функции приложения
+				ul.functions__list
+					each item in functions
+						li.functions__item 
+							div(class=`functions__item-icon functions__item-icon--${item.icon}`)
+							.functions__item-ttl #{item.title}
+								
+		footer.page-footer

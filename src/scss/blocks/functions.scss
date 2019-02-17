@@ -1,0 +1,81 @@
+.functions{
+  background: #f1f3fb;
+  border-radius: 100% 100% 0 0 / 75px 75px 0 0;
+  position: relative;
+  z-index: 1;
+  padding: 150px 0 130px;
+  
+  
+  &__heading{
+    color: $c-blue-dark;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  &__list{
+    @extend .u-list-unstyled;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  &__item{
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    padding: 35px 60px 40px;
+  }
+  &__item-icon{
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(#16afe0, .25);
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto 18px;
+    
+    &::after{
+      display: block;
+      content: '';
+      background: url($spritePath) no-repeat center;
+      margin: auto;
+    }
+  }
+
+  &__item-icon--tablets::after{
+    @include sprite-position($tablets);
+    @include sprite-width($tablets);
+    @include sprite-height($tablets);
+  }
+  &__item-icon--siren::after{
+    @include sprite-position($siren);
+    @include sprite-width($siren);
+    @include sprite-height($siren);
+  }
+  &__item-icon--heart::after{
+    @include sprite-position($heart);
+    @include sprite-width($heart);
+    @include sprite-height($heart);
+  }
+  &__item-icon--watch::after{
+    @include sprite-position($watch);
+    @include sprite-width($watch);
+    @include sprite-height($watch);
+  }
+  &__item-icon--conversation::after{
+    @include sprite-position($conversation);
+    @include sprite-width($conversation);
+    @include sprite-height($conversation);
+  }
+  &__item-icon--fb::after{
+    @include sprite-position($fb);
+    @include sprite-width($fb);
+    @include sprite-height($fb);
+  }
+
+  &__item-ttl{
+    text-align: center;
+    font-size: 16px;
+    line-height: (24/16);
+    color: $c-blue-dark;
+  }
+}

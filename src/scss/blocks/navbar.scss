@@ -1,0 +1,25 @@
+.navbar{
+  height: 94px;
+  margin-bottom: -94px;
+  color: $c-white;
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  &__logo {
+    display: block;
+    padding-top: 12px;
+  }
+  &__logo-img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  &__btn-wrap{
+    margin-left: auto;
+  }
+
+}

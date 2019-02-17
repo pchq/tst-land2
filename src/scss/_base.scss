@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(#000, 0);
+}
+
+body {
+  margin: 0; // 1
+  font-family: $font-base;
+  font-weight: normal;
+  text-align: left;
+  background-color: #fff;
+}
+
+p {
+  margin-top: 0;
+}
+
+button{
+  font: inherit;
+}

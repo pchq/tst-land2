@@ -1,0 +1,36 @@
+.top-menu{
+  @extend .u-list-unstyled;
+
+  margin-left: 175px;
+  
+  &__item{
+    display: inline-block;
+    padding: 0 25px;
+  }
+  
+  &__link{
+    color: $c-white;
+    font-weight: bold;
+    position: relative;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+
+    &::after{
+      display: none;
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -2px;
+      background: $c-white;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+    
+    &:hover::after{
+      display: block;
+    }
+  }
+}

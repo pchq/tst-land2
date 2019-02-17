@@ -1,0 +1,26 @@
+.slider-controls{
+  @extend .u-list-unstyled;
+  
+  border: 1px solid $c-blue-light;
+  border-radius: 8px;
+  padding: 7px 15px;
+  height: 16px;
+  display: inline-flex;
+  margin: auto;
+  
+  &__item{
+    display: inline-block;
+    height: 1px;
+    width: 16px;
+    background: $c-blue-light;
+    
+    
+    & + & {
+      margin-left: 8px;
+    }
+    
+    &.is-active{
+      background: $c-white;
+    }
+  }
+}

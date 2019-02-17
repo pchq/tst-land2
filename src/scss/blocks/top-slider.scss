@@ -1,0 +1,40 @@
+.top-slider{
+  min-height: 750px;
+  background: #3562a5 url($imgPath + 'slider-bg.jpg') no-repeat top center;
+  text-align: center;
+  border-radius: 0 0 100% 100% / 0 0 75px 75px;
+  margin-bottom: -75px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 30px;
+  z-index: 1;
+  
+  &__body{
+    margin: auto;
+  }
+  
+  &__item{
+    color: $c-white;
+    max-width: 760px;
+    margin: auto;
+
+  }
+  &__item-heading{
+    margin-bottom: 35px;
+  }
+  
+  &__item-descr{
+    font-size: 24px;
+    line-height: (36/24);
+    margin-bottom: 50px;
+  }
+    
+  &__controls{
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    display: flex;
+  }
+}
